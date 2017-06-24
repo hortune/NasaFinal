@@ -101,3 +101,12 @@ Not hard
 **Current File Location** : github hortune/NasaFinal
 
 **Script Usage** : bash install.sh
+
+# Archiso 
+製造iso，目標是能自動安裝所有套件，跟啟動ansible配置好nfs和ldap。
+
+## Install Archiso
+```
+pacman -S archiso
+cp /usr/share/archiso/configs/releng/* -r archlive
+```
