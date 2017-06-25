@@ -1,0 +1,23 @@
+Network Administration/System Administration
+Final Project : Arch Linux 工作站生成
+
+題目敘述(背景介紹)
+
+
+
+系統簡介
+
+實作過程
+
+遇到的困難
+
+分工
+
+
+
+1. 架設一台 LDAP 伺服器、NFS 伺服器，分別提供工作站驗證服務與家目錄掛載，可能還需要一
+台 DNS 伺服器。
+2. 需安裝所需所有套件，清單可見此。
+3. 因為可能有多台工作站，對於 hostname 與 IP 分配須有完善規劃。
+4. 用 Puppet 或 Ansible 等自動化工具一鍵生成工作站。
+5. Bonus:切分內網 VLAN 和外網 VLAN，讓 LDAP、NFS 等服務在內網提供服務(以保護這些服務)，外網則供使用者登入
