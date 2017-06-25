@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "n
 p
 
@@ -27,10 +29,13 @@ mkfs.ext4 /dev/sda3
 mount /dev/sda3 /mnt/home
 pacstrap /mnt base
 genfstab -p -U /mnt > /mnt/etc/fstab
+
 echo "echo "Y" | pacman -S grub-bios
 grub-install --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 echo "root:root" | chpasswd
+systemctl enable dhcpcd@enp0s3.service
+systemctl enable dhcpcd@enp0s8.service
 exit
 " | arch-chroot /mnt
 poweroff
